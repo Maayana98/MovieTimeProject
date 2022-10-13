@@ -2,6 +2,7 @@ const express = require('express');
 const Router = express.Router();
 const JWT = require('jsonwebtoken');
 const Clients = require("../../db/models/clients");
+const clientsRouter = require("./client");
 const OrdersRouter = require("./orders");
 const MoviesRouter = require("./movies");
 const notificationsRouter = require("./notifications");
@@ -37,16 +38,17 @@ Router.get('/logout', CookieValidation, async function(req, res) {
 })
 
 
-router.use('/user', userRouter)
+Router.use('/user', clientsRouter)
 
 
-router.use('/reservations', reservationsRouter)
+Router.use('/reservations', OrdersRouter)
 
 
-router.use('/hotels', hotelsRouter)
+
+Router.use('/hotels', MoviesRouter)
 
 
-router.use('/notifications', notificationsRouter)
+Router.use('/notifications', notificationsRouter)
 
 module.exports = Router;
 

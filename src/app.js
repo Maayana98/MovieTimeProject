@@ -55,10 +55,12 @@ dbConnect().then(() => {
         wss.on('connection', (ws) => {
             const clientId = uuid4()
             clients.set(clientId, ws)
-            console.log(`[+] New client connected to web socket, ID: ${clientId}`)
+            console.log(`[SUCCESS] New client connected to web socket, ID: ${clientId}`)
         })
     })
 }).catch((err) => {
     console.log("[FAIL] Failed to connect to data base", err)
     throw new Error(`[FAIL] Failed to connect to database, ${err}`)
 })
+
+

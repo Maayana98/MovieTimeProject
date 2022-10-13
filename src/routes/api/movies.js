@@ -26,7 +26,7 @@ Router.post('/', CookieValidation, async function(req, res) {
 })
 
 // Update movie information
-router.put('/', CookieValidation, async function(req, res) {
+Router.put('/', CookieValidation, async function(req, res) {
     try {
         const movieId = req.body.movieId
         let movie = await Movies.findOne({ movieID: movieID }).exec()
