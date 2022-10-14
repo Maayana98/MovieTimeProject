@@ -1,7 +1,6 @@
 {
   "name": "movie_time_fullstackproj",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./src/app.js",
@@ -25,5 +24,15 @@
     "passport": "^0.6.0",
     "uuid4": "^2.0.3",
     "ws": "^8.9.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maayana98/MovieTimeProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Maayana98/MovieTimeProject/issues"
+  },
+  "homepage": "https://github.com/Maayana98/MovieTimeProject#readme",
+  "description": ""
 }
