@@ -45,7 +45,7 @@ Router.use('/reservations', OrdersRouter)
 
 
 
-Router.use('/hotels', MoviesRouter)
+Router.use('/movies', MoviesRouter)
 
 
 Router.use('/notifications', notificationsRouter)
